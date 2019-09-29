@@ -1,0 +1,66 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #5383e8;
+}
+
+#wrap {
+	width: 100%;
+	text-align: center;
+}
+
+#join_cavas {
+	display: inline-block;
+	width: 500px;
+	height: 450px;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+	background: white;
+}
+
+#join_cavas2 {
+	display: inline-block;
+	width: 400px;
+	height: 100%;
+}
+
+.join_input_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	border: 1px solid lightgray;
+}
+
+.join_input {
+	margin: auto;
+	width: 350px;
+	height: 30px;
+	border: none;
+}
+
+.join_button_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+}
+
+.join_button_box {
+	width: 400px;
+	height: 100%;
+	background: lightgray;
+	color: white;
+	font-size: 1.5em;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: auto;
+}
+
+.fail_msg {
+	display: none;
+	color: red;
+	font-weight: bold;
+}
+
+.blank {
+	height: 20px;
+}

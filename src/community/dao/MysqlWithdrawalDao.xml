@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community.dao.MysqlWithdrawalDao">
+	<resultMap type="withdrawal" id="withdrawalResultMap">
+		<id column="WNO" property="wno" />
+		<result column="EMAIL" property="email" />
+		<result column="NICKNAME" property="nickname" />
+		<result column="CNAME" property="cname" />
+		<result column="REASON" property="reason" />
+		<result column="DETAILED_REASON" property="detailed_reason" />
+		<result column="REG_DATE" property="reg_date" javaType="java.sql.Timestamp" />
+		<result column="WITHDRAWAL_DATE" property="withdrawal_date" javaType="java.sql.Timestamp" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="member">
+		INSERT INTO WITHDRAWAL (EMAIL, NICKNAME, CNAME, REASON, DETAILED_REASON, REG_DATE, WITHDRAWAL_DATE)
+		VALUES (#{email}, #{nickname}, #{cname}, #{reason}, #{detailed_reason}, #{reg_date}, now())
+	</insert>
+</mapper>

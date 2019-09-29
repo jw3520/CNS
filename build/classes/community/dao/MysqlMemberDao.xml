@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community.dao.MysqlMemberDao">
+	<resultMap type="member" id="memberResultMap">
+		<id column="MNO" property="mno" />
+		<result column="EMAIL" property="email" />
+		<result column="PASSWORD" property="password" />
+		<result column="NICKNAME" property="nickname" />
+		<result column="CNO" property="cno" />
+		<result column="POINT" property="point" />
+		<result column="REG_DATE" property="reg_date" javaType="java.sql.Timestamp" />
+	</resultMap>
+	
+	<select id="selectOne" parameterType="int" resultMap="memberResultMap">
+		SELECT *
+		FROM MEMBER
+		WHERE MNO = #{mno}
+	</select>
+	
+	<select id="selectOne_email" parameterType="string" resultMap="memberResultMap">
+		SELECT *
+		FROM MEMBER
+		WHERE EMAIL = #{email}
+	</select>
+	
+	<insert id="insert" parameterType="member">
+		INSERT INTO MEMBER (EMAIL, PASSWORD, NICKNAME, CNO, POINT, REG_DATE)
+		VALUES (#{email}, #{password}, #{nickname}, #{cno}, 0, now())
+	</insert>
+	
+	<update id="update" parameterType="member">
+		UPDATE MEMBER
+		<set>
+  			<if test="password != null">PASSWORD = #{password},</if>
+  			<if test="nickname != null">NICKNAME = #{nickname},</if>
+  			<if test="cno != null">CNO = #{cno}</if>
+  		</set>
+  		WHERE MNO = #{mno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM MEMBER
+  		WHERE MNO = #{mno}
+	</delete>
+	
+	<select id="exist" parameterType="member" resultMap="memberResultMap">
+		SELECT *
+		FROM MEMBER
+		WHERE EMAIL = #{email} AND PASSWORD = #{password}
+	</select>
+	
+	<select id="emailCheck" parameterType="string" resultType="int">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE EMAIL = #{email}
+	</select>
+	
+	<select id="nicknameCheck" parameterType="string" resultType="int">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE NICKNAME = #{nickname}
+	</select>
+</mapper>

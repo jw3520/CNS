@@ -1,0 +1,79 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #5383e8;
+}
+
+#wrap {
+	width: 100%;
+	text-align: center;
+}
+
+#write_cavas {
+	display: inline-block;
+	width: 800px;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+	background: white;
+}
+
+#write_cavas2 {
+	display: inline-block;
+	width: 750px;
+	height: 100%;
+}
+
+#write_cavas2 textarea {
+	width: 95%;
+	height: 600px;
+}
+
+.write_input_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	border: 1px solid lightgray;
+}
+
+.write_input {
+	font-size: 1.03em;
+	margin: auto;
+	width: 700px;
+	height: 30px;
+	border: none;
+}
+
+.content_input_panel {
+	height: 600px;
+}
+
+.content_input {
+	width: 700px;
+	border: none;
+	font-size: 1.2em;
+}
+
+.write_button_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+}
+
+.write_button_box {
+	width: 200px;
+	height: 100%;
+	font-size: 1.5em;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: white;
+	background: #3B5997;
+	cursor: pointer;
+}
+
+#write_button {
+	margin-left: 400px;
+}
+
+.blank {
+	height: 20px;
+}

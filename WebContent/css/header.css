@@ -1,0 +1,288 @@
+.logInfo_panel {
+	height: 40px;
+	background: #232f46;
+}
+
+.home {
+	font-size: 30px;
+	color: white;
+	float: left;
+	line-height: 40px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+#logInfo {
+	height: 40px;
+	color: white;
+	float: right;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: #3B5997;
+	padding-left: 10px;
+	z-index: 2;
+}
+
+#logInfo img {
+	width: 30px;
+	height: 30px;
+}
+
+#logInfo p {
+	margin: auto 10px;
+}
+
+.login_button {
+	height: 30px;
+	background: #5383e8;
+	color: white;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 0 15px;
+	float: right;
+	margin: 5px;
+	font-size: 1em;
+}
+
+.option_button {
+	width: 40px;
+	height: 40px;
+	color: white;
+	float: right;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	background: url(images/button_option.png) no-repeat;
+	background-size: contain;
+	border: none;
+	outline: none;
+	text-indent: -10000px;
+	padding-left: 10px;
+	z-index: 1;
+}
+
+.menu_panel {
+	height: 100px;
+}
+
+.menu_button {
+	width: 50px;
+	height: 50px;
+ 	display: inline-block;
+	float: left;
+	background: url(images/button_menu.png) no-repeat;
+	background-size: contain;
+	text-indent: -10000px;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 45px;
+	left: 5px;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: opacity .4s ease;
+	z-index: 5;
+}
+
+.menu_button:hover {
+	opacity: 0.8;
+}
+
+.menu_list {
+	position: absolute;
+	top: 40px;
+	left: -500px;
+	opacity: 0;
+	z-index: 4;
+}
+
+.menu_list ul {
+	list-style-type : none;
+	padding-left: 60px;
+} 
+.menu_list li {
+	float: left;
+	margin: 0 10px;
+}
+
+.menu_list a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu_list span {
+	display: inline-block;
+	height: 30px;
+}
+
+.menu_list span:hover {
+	border-bottom: 3px solid white;
+}
+
+.active {
+	font-weight: bold;
+	border-bottom: 3px solid white;
+}
+
+.search_type {
+	width: 50px;
+	height: 50px;
+ 	display: inline-block;
+	float: left;
+	background: url(images/button_type.png) no-repeat;
+	background-size: contain;
+	border: none;
+	outline: none;
+	position: absolute;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: opacity .4s ease;
+	top: 45px;
+	right: 70px;
+	color: white;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+.search_type:hover {
+	opacity: 0.8;
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.search_input {
+	width: 0px;
+	height: 50px;
+	font-size: 25px;
+	display: inline-block;
+	font-weight: 100;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 3px;
+	padding-right: 60px;
+	position: absolute;
+	top: 45px;
+	right: 5px;
+	background: none;
+	z-index: 3;
+	transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+	cursor: pointer;
+}
+
+.search_input:focus:hover {
+	border-bottom: 3px solid white;
+}
+
+.search_input:focus {
+	width: 300px;
+	z-index: 1;
+	border-bottom: 3px solid white;
+	cursor: text;
+}
+.search_submit {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	float: right;
+	background: url(images/button_search.png) no-repeat;
+	background-size: contain;
+	text-indent: -10000px;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 45px;
+  	right: 5px;
+	z-index: 2;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: opacity .4s ease;
+}
+
+.search_submit:hover {
+	opacity: 0.8;
+}
+
+.sideBar_panel {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	width: 0px;
+	background: #3B5997;
+	z-index: 4;
+	display: none;
+}
+
+.control_hide_panel {
+	position: absolute;
+	right: 400px;
+	top: 150px;
+	width: 30px;
+	height: 100px;
+	background: #232f46;
+	border-radius: 10px 0 0 10px;
+	cursor: pointer;
+	display: none;
+}
+
+.control_hide {
+	top: 35px;
+	width: 30px;
+	height: 30px;
+	background: url(images/button_hide.png) no-repeat;
+  	background-size: contain;
+  	border: none;
+  	outline: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.detailInfo_panel {
+	text-align: center;
+	margin: 30px;
+}
+
+#nicknameInfo {
+	color: white;
+	display: inline-block;
+	padding-left: 10px;
+}
+
+#nicknameInfo img {
+	width: 50px;
+	height: 50px;
+}
+
+#nick_commu {
+	display: inline-block;
+	margin: auto 10px;
+	font-size: 1.5em;
+}
+
+.detailInfo_panel p:not(#nick_commu) {
+	color: white;
+	text-align: left;
+	font-size: 1.2em;
+}
+
+.detailInfo_panel p a {
+	color: white;
+	text-decoration: none;
+}
+
+.log_button {
+	height: 30px;
+	background: #5383e8;
+	color: white;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 0 15px;
+	margin: 10px;
+	font-size: 1em;
+}

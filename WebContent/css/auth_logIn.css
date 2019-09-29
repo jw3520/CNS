@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #5383e8;
+}
+
+#wrap {
+	width: 100%;
+	text-align: center;
+}
+
+#logIn_cavas {
+	display: inline-block;
+	width: 500px;
+	height: 280px;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+	background: white;
+}
+
+#logIn_cavas2 {
+	display: inline-block;
+	width: 400px;
+	height: 100%;
+}
+
+.logIn_input_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	border: 1px solid lightgray;
+}
+
+.logIn_input {
+	margin: auto;
+	width: 350px;
+	height: 30px;
+	border: none;
+}
+
+#logIn_fail_msg {
+	color: red;
+	font-weight: bold;
+}
+
+.logIn_button_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+}
+
+.logIn_button_box {
+	width: 400px;
+	height: 100%;
+	background: #3B5997;
+	color: white;
+	font-size: 1.5em;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.logIn_sub p {
+	color: gray;
+	text-decoration: none;
+}
+
+.logIn_sub a:hover {
+	color: gray;
+	text-decoration: none;
+}
+
+.logIn_sub a:visited {
+	color: gray;
+	text-decoration: none;
+}
+
+.logIn_sub a:link {
+	color: gray;
+	text-decoration: none;
+}
+
+.blank {
+	height: 20px;
+}

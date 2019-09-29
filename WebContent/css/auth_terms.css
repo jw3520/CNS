@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #5383e8;
+}
+
+#wrap {
+	width: 100%;
+	text-align: center;
+}
+
+#terms_canvas {
+	display: inline-block;
+	width: 800px;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+	background: white;
+}
+
+#terms_canvas2 {
+	display: inline-block;
+	width: 740px;
+	height: 100%;
+}
+
+#terms_canvas2 textarea{
+	width: 100%;
+	height: 150px;
+}
+
+.terms_title {
+	text-align: left;
+}
+
+.terms_check {
+	float: right;
+	cursor: pointer;
+}
+
+.agree_button_panel {
+	display: flex;
+	align-items: center;
+	height: 50px;
+}
+
+.agree_button_box {
+	width: 375px;
+	height: 100%;
+	background: #3B5997;
+	color: white;
+	font-size: 1.5em;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#agree_button {
+	background: lightgray;
+	cursor: auto;
+}
+
+.blank {
+	height: 20px;
+}
+
+.blank2 {
+	width: 50px;
+}

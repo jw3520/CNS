@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community.dao.MysqlVoteDao">
+	
+	<select id="exist" parameterType="vote" resultType="string">
+		SELECT VALUE
+		FROM VOTE
+		WHERE BNO = #{bno} AND MNO = #{mno}
+	</select>
+	
+	<insert id="insert" parameterType="vote">
+		INSERT INTO VOTE (BNO, MNO, NICKNAME, CNAME, VALUE, VOTE_DATE)
+		VALUES (#{bno}, #{mno}, #{nickname}, #{cname}, #{value}, now())
+	</insert>
+	
+	<delete id="delete" parameterType="vote">
+		DELETE FROM VOTE
+  		WHERE BNO = #{bno} AND MNO = #{mno}
+	</delete>
+</mapper>
